@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>4 SPRINGS SKINCARE — Organic Tallow Moisturiser</title>
+  <meta name="description" content="A simple, nourishing organic tallow moisturiser made with thoughtfully selected ingredients.">
+  <style>
+    :root{
+      --cream:#f7f1e7; --paper:#fffdf9; --ink:#28271f; --muted:#6f6a5d;
+      --sage:#68735d; --sage-dark:#4d5945; --line:#ddd5c6; --accent:#b48b62;
+      --max:1180px; --radius:24px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:var(--paper);line-height:1.55}
+    a{color:inherit;text-decoration:none}
+    .announcement{background:var(--sage-dark);color:#fff;padding:10px 20px;text-align:center;font-size:13px;letter-spacing:.04em}
+    header{position:sticky;top:0;z-index:20;background:rgba(255,253,249,.94);backdrop-filter:blur(12px);border-bottom:1px solid rgba(221,213,198,.7)}
+    nav{max-width:var(--max);margin:auto;height:74px;display:flex;align-items:center;justify-content:space-between;padding:0 22px}
+    .logo{font-family:Georgia,serif;font-size:27px;letter-spacing:.12em}
+    .links{display:flex;gap:28px;font-size:14px}
+    .links a:hover{text-decoration:underline;text-underline-offset:5px}
+    .cart{border:1px solid var(--line);padding:10px 15px;border-radius:999px;background:transparent;cursor:pointer}
+    .hero{background:var(--cream);min-height:680px;display:grid;grid-template-columns:1.05fr .95fr;align-items:center}
+    .hero-copy{max-width:var(--max);padding:80px 7vw 80px max(22px,calc((100vw - var(--max))/2 + 22px))}
+    .eyebrow{text-transform:uppercase;letter-spacing:.16em;font-size:12px;color:var(--sage-dark);font-weight:700}
+    h1,h2,h3{font-family:Georgia,"Times New Roman",serif;font-weight:400;line-height:1.08}
+    h1{font-size:clamp(48px,6vw,82px);margin:18px 0 22px;max-width:720px}
+    .hero-copy p{font-size:18px;max-width:570px;color:var(--muted)}
+    .actions{display:flex;gap:12px;align-items:center;margin-top:30px;flex-wrap:wrap}
+    .btn{display:inline-flex;align-items:center;justify-content:center;padding:14px 22px;border-radius:999px;border:1px solid var(--sage-dark);font-weight:700;font-size:14px;cursor:pointer}
+    .btn.primary{background:var(--sage-dark);color:white}
+    .btn.secondary{background:transparent;color:var(--sage-dark)}
+    .hero-art{height:100%;min-height:680px;position:relative;display:grid;place-items:center;overflow:hidden;background:#e9e0cf}
+    .sun{position:absolute;width:420px;height:420px;border-radius:50%;background:#f4ead7;top:9%;right:12%}
+    .jar{position:relative;width:280px;height:225px;border-radius:30px 30px 45px 45px;background:#ebe5d9;box-shadow:0 35px 60px rgba(66,54,39,.18);z-index:2}
+    .lid{position:absolute;width:305px;height:58px;left:-12px;top:-35px;border-radius:16px;background:#59634e;box-shadow:0 10px 18px rgba(40,39,31,.16)}
+    .label{position:absolute;left:25px;right:25px;top:62px;height:115px;background:#f7f1e7;border:1px solid #d5c9b7;border-radius:10px;text-align:center;padding:17px}
+    .label strong{display:block;font-family:Georgia,serif;font-size:25px;letter-spacing:.12em}
+    .label span{display:block;font-size:10px;letter-spacing:.18em;margin-top:8px;color:var(--muted)}
+    .floating{position:absolute;bottom:8%;left:9%;background:rgba(255,253,249,.85);padding:14px 18px;border:1px solid rgba(221,213,198,.8);border-radius:14px;font-size:13px;z-index:3}
+    section{padding:95px 22px}
+    .container{max-width:var(--max);margin:auto}
+    .intro{text-align:center;max-width:750px;margin:auto}
+    .intro h2{font-size:48px;margin:12px 0 15px}
+    .intro p{color:var(--muted);font-size:17px}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:50px}
+    .card{background:var(--cream);padding:32px;border-radius:var(--radius);min-height:210px}
+    .icon{font-size:25px}
+    .card h3{font-size:27px;margin:20px 0 10px}
+    .card p{color:var(--muted);font-size:14px}
+    .product{background:#eee7da}
+    .product-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+    .product-visual{min-height:530px;border-radius:var(--radius);background:#e4dac8;display:grid;place-items:center;position:relative;overflow:hidden}
+    .product-visual .jar{transform:scale(1.15)}
+    .details h2{font-size:52px;margin:10px 0}
+    .price{font-size:24px;margin:15px 0}
+    .bullets{padding:0;list-style:none;border-top:1px solid var(--line);margin:30px 0 0}
+    .bullets li{padding:14px 0;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:20px;font-size:14px}
+    .qty{display:flex;align-items:center;border:1px solid var(--line);border-radius:999px;overflow:hidden}
+    .qty button{border:0;background:transparent;width:40px;height:42px;font-size:18px;cursor:pointer}
+    .qty span{min-width:30px;text-align:center}
+    .wide{width:100%;margin-top:14px}
+    .story{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+    .story h2{font-size:52px;margin:10px 0 18px}
+    .story p{color:var(--muted)}
+    .quote{background:var(--sage-dark);color:#fff;border-radius:var(--radius);padding:42px}
+    .quote p{color:#fff;font-family:Georgia,serif;font-size:30px;line-height:1.25}
+    .quote small{opacity:.75}
+    .faq{max-width:820px;margin:55px auto 0}
+    details{border-top:1px solid var(--line);padding:20px 0}
+    details:last-child{border-bottom:1px solid var(--line)}
+    summary{cursor:pointer;font-family:Georgia,serif;font-size:22px}
+    details p{color:var(--muted);max-width:680px}
+    .newsletter{background:var(--cream)}
+    .newsletter-inner{max-width:650px;text-align:center;margin:auto}
+    form{display:flex;gap:8px;margin-top:24px}
+    input{flex:1;border:1px solid var(--line);background:white;padding:14px 16px;border-radius:999px;font:inherit}
+    footer{padding:34px 22px;border-top:1px solid var(--line);font-size:13px;color:var(--muted)}
+    .footer-inner{max-width:var(--max);margin:auto;display:flex;justify-content:space-between;gap:20px}
+    .toast{position:fixed;right:20px;bottom:20px;background:var(--ink);color:white;padding:13px 17px;border-radius:12px;transform:translateY(20px);opacity:0;pointer-events:none;transition:.25s;z-index:50}
+    .toast.show{transform:none;opacity:1}
+    @media(max-width:800px){
+      .links{display:none}
+      .hero,.product-grid,.story{grid-template-columns:1fr}
+      .hero-copy{padding:65px 22px}
+      .hero-art{min-height:520px}
+      .cards{grid-template-columns:1fr}
+      .product-grid{gap:35px}
+      .product-visual{min-height:420px}
+      .story{gap:30px}
+      section{padding:70px 22px}
+      form{flex-direction:column}
+      .footer-inner{flex-direction:column}
+    }
+  </style>
+</head>
+<body>
+  <div class="announcement">SMALL-BATCH • SIMPLE INGREDIENTS • MADE WITH CARE</div>
+  <header>
+    <nav>
+      <a class="logo" href="#">4 SPRINGS SKINCARE</a>
+      <div class="links">
+        <a href="#benefits">Why tallow</a>
+        <a href="#shop">Shop</a>
+        <a href="#story">Our story</a>
+        <a href="#faq">FAQ</a>
+      </div>
+      <button class="cart" onclick="addToCart()">Bag (<span id="count">0</span>)</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow">Organic tallow moisturiser</div>
+        <h1>Skin nourishment, kept beautifully simple.</h1>
+        <p>A rich, minimalist moisturiser made with grass-fed tallow and a small selection of carefully chosen botanical ingredients.</p>
+        <div class="actions">
+          <a class="btn primary" href="#shop">Shop moisturiser</a>
+          <a class="btn secondary" href="#story">Discover 4 SPRINGS SKINCARE</a>
+        </div>
+      </div>
+      <div class="hero-art" aria-label="Product illustration">
+        <div class="sun"></div>
+        <div class="jar" aria-hidden="true">
+          <div class="lid"></div>
+          <div class="label"><strong>4 SPRINGS SKINCARE</strong><span>ORGANIC TALLOW<br>MOISTURISER</span></div>
+        </div>
+        <div class="floating">50 g • Unscented • Small batch</div>
+      </div>
+    </section>
+
+    <section id="benefits">
+      <div class="container">
+        <div class="intro">
+          <div class="eyebrow">A considered formula</div>
+          <h2>Less on the label. More in the jar.</h2>
+          <p>Designed for people who prefer a short ingredient list and a rich, comforting texture.</p>
+        </div>
+        <div class="cards">
+          <article class="card"><div class="icon">✦</div><h3>Minimal ingredients</h3><p>A focused formula without unnecessary fragrance or filler ingredients.</p></article>
+          <article class="card"><div class="icon">◌</div><h3>Rich &amp; nourishing</h3><p>A balm-like texture that melts between your fingertips and leaves skin feeling moisturised.</p></article>
+          <article class="card"><div class="icon">⌁</div><h3>Thoughtfully sourced</h3><p>Made in small batches with an emphasis on simple, traceable ingredients.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="shop" class="product">
+      <div class="container product-grid">
+        <div class="product-visual">
+          <div class="jar" aria-hidden="true">
+            <div class="lid"></div>
+            <div class="label"><strong>4 SPRINGS SKINCARE</strong><span>ORGANIC TALLOW<br>MOISTURISER</span></div>
+          </div>
+        </div>
+        <div class="details">
+          <div class="eyebrow">The original</div>
+          <h2>Organic Tallow Moisturiser</h2>
+          <p>Our signature everyday moisturiser, made for hands, body and face. Patch test before use, especially if you have sensitive skin.</p>
+          <div class="price">$38.00 AUD</div>
+          <div class="actions">
+            <div class="qty"><button onclick="changeQty(-1)">−</button><span id="qty">1</span><button onclick="changeQty(1)">+</button></div>
+            <button class="btn primary" onclick="addToCart()">Add to bag</button>
+          </div>
+          <ul class="bullets">
+            <li><span>Size</span><strong>50 g</strong></li>
+            <li><span>Texture</span><strong>Rich balm</strong></li>
+            <li><span>Fragrance</span><strong>Unscented</strong></li>
+            <li><span>Ingredients</span><strong>Tallow + botanicals</strong></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="story">
+      <div class="container story">
+        <div>
+          <div class="eyebrow">The 4 SPRINGS SKINCARE philosophy</div>
+          <h2>Back to the essentials.</h2>
+          <p>4 SPRINGS SKINCARE was created around a simple idea: skincare doesn't need a long ingredient list to feel special. We choose a small number of ingredients, focus on texture and quality, and make each batch with care.</p>
+          <p>Our tallow is sourced from grass-fed cattle and rendered into a smooth base designed to feel luxurious without unnecessary complexity.</p>
+        </div>
+        <div class="quote">
+          <p>“A quiet little jar for a slower, simpler skincare ritual.”</p>
+          <small>— 4 SPRINGS SKINCARE studio note</small>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq">
+      <div class="container">
+        <div class="intro">
+          <div class="eyebrow">Questions</div>
+          <h2>Good to know.</h2>
+        </div>
+        <div class="faq">
+          <details><summary>What is tallow?</summary><p>Tallow is a rendered form of animal fat. In this formula it provides the rich, emollient base of the moisturiser.</p></details>
+          <details><summary>How should I use it?</summary><p>Warm a small amount between clean fingertips and massage onto slightly damp skin. Start with less than you think you need.</p></details>
+          <details><summary>Is it scented?</summary><p>This concept product is unscented. If you add essential oils or fragrance to a final formula, update the ingredient and allergen information accordingly.</p></details>
+          <details><summary>Can I use it on my face?</summary><p>Many people use rich balms on the face, but skin can react differently. Patch test first and discontinue use if irritation occurs.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="newsletter">
+      <div class="newsletter-inner">
+        <div class="eyebrow">Join the list</div>
+        <h2>Slow skincare, in your inbox.</h2>
+        <p>Get product updates, studio notes and occasional offers.</p>
+        <form onsubmit="subscribe(event)">
+          <input id="email" type="email" placeholder="Your email address" required>
+          <button class="btn primary" type="submit">Subscribe</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div>© 2026 4 SPRINGS SKINCARE. All rights reserved.</div>
+      <div>Ingredients &amp; claims should be reviewed for your market before launch.</div>
+    </div>
+  </footer>
+  <div class="toast" id="toast">Added to your bag.</div>
+
+  <script>
+    let qty = 1, count = 0;
+    function changeQty(n){ qty=Math.max(1,qty+n); document.getElementById('qty').textContent=qty; }
+    function addToCart(){ count += qty; document.getElementById('count').textContent=count; showToast('Added '+qty+' moisturiser'+(qty>1?'s':'')+' to your bag.'); }
+    function showToast(msg){ const t=document.getElementById('toast'); t.textContent=msg; t.classList.add('show'); setTimeout(()=>t.classList.remove('show'),2200); }
+    function subscribe(e){ e.preventDefault(); showToast('Thanks — you’re on the list.'); e.target.reset(); }
+  </script>
+</body>
+</html>
