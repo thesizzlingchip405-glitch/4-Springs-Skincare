@@ -18,7 +18,8 @@
     .announcement{background:var(--sage-dark);color:#fff;padding:10px 20px;text-align:center;font-size:13px;letter-spacing:.04em}
     header{position:sticky;top:0;z-index:20;background:rgba(255,253,249,.94);backdrop-filter:blur(12px);border-bottom:1px solid rgba(221,213,198,.7)}
     nav{max-width:var(--max);margin:auto;height:74px;display:flex;align-items:center;justify-content:space-between;padding:0 22px}
-    .logo{font-family:Georgia,serif;font-size:27px;letter-spacing:.12em}
+    .logo img{height:56px;width:auto;display:block;object-fit:contain}
+    .logo{display:flex;align-items:center}
     .links{display:flex;gap:28px;font-size:14px}
     .links a:hover{text-decoration:underline;text-underline-offset:5px}
     .cart{border:1px solid var(--line);padding:10px 15px;border-radius:999px;background:transparent;cursor:pointer}
@@ -100,7 +101,7 @@
   <div class="announcement">SMALL-BATCH • SIMPLE INGREDIENTS • MADE WITH CARE</div>
   <header>
     <nav>
-      <a class="logo" href="#">4 SPRINGS SKINCARE</a>
+      <a class="logo" href="#" aria-label="4 Springs Skincare"><img src="4-springs-logo.png" alt="4 Springs Skincare logo"></a>
       <div class="links">
         <a href="#benefits">Why tallow</a>
         <a href="#shop">Shop</a>
@@ -159,7 +160,7 @@
           <div class="eyebrow">The original</div>
           <h2>Organic Tallow Moisturiser</h2>
           <p>Our signature everyday moisturiser, made for hands, body and face. Patch test before use, especially if you have sensitive skin.</p>
-          <div class="price">$38.00 AUD</div>
+          <div class="price">$55.00 AUD</div>
           <div class="actions">
             <div class="qty"><button onclick="changeQty(-1)">−</button><span id="qty">1</span><button onclick="changeQty(1)">+</button></div>
             <button class="btn primary" onclick="addToCart()">Add to bag</button>
